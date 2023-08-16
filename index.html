@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="title"> Registro</div>
+        <form action="#">
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">Nombre</span>
+                    <input type="text" placeholder="Ingrese el nombre" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Apellido</span>
+                    <input type="text" placeholder="Ingrese el apellido" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Email</span>
+                    <input type="text" placeholder="Ingrese el email" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Edad</span>
+                    <input type="number" placeholder="Ingrese su edad" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Nacionalidad</span>
+                    <!--<input type="text" placeholder="Ingrese su nacionalidad" required>-->
+                   <div class="selectdiv">
+                    <label>
+                        <select>
+                            <option value="Argentina"> Argentina </option>
+                            <option value="Brasilera"> Brasilera </option>
+                            <option value="Chilena"> Chilena </option>
+                        </select>
+                    </label>
+                   </div>
+                </div>
+            </div>    
+            <!--Parte de eleccion de GEnero-->
+            <div class="gender-details">
+                <input type="radio" name="gender" id="dot-1">
+                <input type="radio" name="gender" id="dot-2">
+                <input type="radio" name="gender" id="dot-3">
+                <span class="gender-title">Género</span>
+                <div class="category">
+                    <label for="dot-1">
+                        <span class="dot one"></span>
+                        <span class="gender">Maculino</span>
+                    </label>
+                    <label for="dot-2">
+                        <span class="dot two"></span>
+                        <span class="gender">Femenino</span>
+                    </label>
+                    <label for="dot-3">
+                        <span class="dot three"></span>
+                        <span class="gender">Prefiero no decir</span>
+                    </label>
+                </div>
+            </div>
+
+            <span class="address-title">Domicilio</span>
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">Calle</span>
+                    <input type="text" placeholder="Ingrese la calle" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Número</span>
+                    <input type="number" placeholder="Ingrese el número" required>
+                </div>
+            </div>
+
+            <div class="button">
+                <input type="submit" value="Register">
+            </div>
+
+        </form>
+    </div>
+</body>
+</html>
