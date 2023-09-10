@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container">
-        <div class="title"> Registro</div>
+        <div class="title"> Registro Beneficio para Clientes</div>
         <form action="#">
             <div class="user-details">
                 <div class="input-box">
@@ -27,44 +27,91 @@
                     <span class="details">Edad</span>
                     <input type="number" placeholder="Ingrese su edad" required min="1" max="120">
                 </div>
-                <div class="input-box">
-                    <span class="details">Nacionalidad</span>
-                    <!--<input type="text" placeholder="Ingrese su nacionalidad" required>-->
-                   <div class="selectdiv">
-                    <label>
-                        <select>
-                            <option value="Argentina"> Argentina </option>
-                            <option value="Brasilera"> Brasilera </option>
-                            <option value="Chilena"> Chilena </option>
-                        </select>
-                    </label>
-                   </div>
-                </div>
+                
             </div>    
             <!--Parte de eleccion de GEnero-->
             <div class="gender-details">
                 <input type="radio" name="gender" id="dot-1">
                 <input type="radio" name="gender" id="dot-2">
                 <input type="radio" name="gender" id="dot-3">
+                <input type="radio" name="gender" id="dot-4">
+                <input type="radio" name="gender" id="dot-5">
+                <input type="radio" name="gender" id="dot-6">
                 <span class="gender-title">Género</span>
-                <div class="category">
-                    <label for="dot-1">
-                        <span class="dot one"></span>
-                        <span class="gender">Maculino</span>
-                    </label>
-                    <label for="dot-2">
-                        <span class="dot two"></span>
-                        <span class="gender">Femenino</span>
-                    </label>
-                    <label for="dot-3">
-                        <span class="dot three"></span>
-                        <span class="gender">Prefiero no decir</span>
-                    </label>
-                </div>
+                
+                    <div class="category">
+                        <label for="dot-1">
+                            <span class="dot one"></span>
+                            <span class="gender">Maculino</span>
+                        </label>
+                        <label for="dot-2">
+                            <span class="dot two"></span>
+                            <span class="gender">Femenino</span>
+                        </label>
+                        <label for="dot-3">
+                            <span class="dot three"></span>
+                            <span class="gender">No Binario</span>
+                        </label>
+                    </div>
+                    <div class="category">  
+                        <label for="dot-4">
+                            <span class="dot four"></span>
+                            <span class="gender">Agénero</span>
+                        </label>
+                        <label for="dot-5">
+                            <span class="dot five"></span>
+                            <span class="gender">Género Fluido</span>
+                        </label>
+                        <label for="dot-6">
+                            <span class="dot six"></span>
+                            <span class="gender">Sin Especificar</span>
+                        </label>
+                    </div>
+                
             </div>
 
             <span class="address-title">Domicilio</span>
             <div class="user-details">
+                <div class="input-box">
+                    <span class="details">Nacionalidad</span>
+                    <!--<input type="text" placeholder="Ingrese su nacionalidad" required>-->
+                   <div class="selectdiv">
+                    <label>
+                        <select class="miLista">
+                            <option value="Argentina"> Argentina </option>
+                            <option value="Brasilera"> Boliviano </option>
+                            <option value="Chilena"> Brasilero </option>
+                            <option value="Colombiano">Colombiano</option>
+                            <option value="Mexicano" >Mexicano</option>
+                            <option value="Paraguayo"> Paraguayo </option>
+                            <option value="Uruguayo">Uruguayo</option>
+                            <option value="Venezolano" >Venezolano</option>
+
+                        </select>
+                    </label>
+                   </div>
+                </div>
+                <div class="input-box">
+                    <span class="details">Sucursal-Provincia</span>
+                    <!--<input type="text" placeholder="Ingrese su provincia" required>-->
+                   <div class="selectdiv">
+                    <label>
+                        <select class="miLista">
+                            <option value="C.A.B.A."> C.A.B.A. </option>
+                            <option value="Chaco"> Chaco </option>
+                            <option value="Cordoba"> Cordoba </option>
+                            <option value="Entre Rios"> Entre Rios </option>
+                            <option value="Formosa"> Formosa </option>
+                            <option value="Jujuy"> Jujuy </option>
+                            <option value="La Rioja"> La Rioja </option>
+                            <option value="Misiones"> Misiones </option>
+                            <option value="Santiago del Estero"> Santiago del Estero </option>
+                            <option value="Salta"> Salta </option>
+                            <option value="San Luis"> San Luis </option>
+                        </select>
+                    </label>
+                   </div>
+                </div>
                 <div class="input-box">
                     <span class="details">Calle</span>
                     <input type="text" placeholder="Ingrese la calle" required>

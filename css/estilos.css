@@ -14,14 +14,15 @@ body {
     background: #FC5C7D;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to bottom, #6A82FB, #FC5C7D);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to bottom, #6A82FB, #FC5C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-    /*background: linear-gradient(135deg, #71b7e6, #9b59b6);*/
 }
 .container {
     max-width: 700px; /*ancho*/
     width: 100%;
     background: #fff;
-    padding: 25px 20px;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
     border-radius: 5px;
 }
 .container .title {
@@ -35,7 +36,7 @@ body {
     left: 0;
     bottom: 0;
     height: 3px;
-    width: 30px;
+    width: 400px;
     background: linear-gradient(to left, #fc5c7d, #6a82fb);
 }
 
@@ -71,7 +72,8 @@ form .user-details .input-box{
 }
 .user-details .input-box input:focus,
 .user-details .input-box input:valid{
-    border-color: #9b59b6;
+    box-shadow: 0 0 5px #fc5c7d; /* Sombra cuando se enfoca */
+    border-color: #fc5c7d;
 }
 
 form .gender-details .gender-title,
@@ -80,16 +82,25 @@ form .address-title{
     font-weight: 500;
 }
 
+/*form .gender-details .category{
+    display: flex;
+    width: 80%;
+    background: red;   
+    margin: 14px 0;
+    justify-content: space-between;
+}*/
 form .gender-details .category{
     display: flex;
     width: 80%;
-    /*background: red;  */ 
+    flex-direction: row;
+    flex-wrap: wrap;
     margin: 14px 0;
     justify-content: space-between;
-}
+  }
 .gender-details .category label{
     display: flex;
     align-items: center;
+    margin: 5px 0;
 }
 .gender-details .category .dot{
     height: 18px;
@@ -102,9 +113,12 @@ form .gender-details .category{
 }
 #dot-1:checked ~ .category label .one,
 #dot-2:checked ~ .category label .two,
-#dot-3:checked ~ .category label .three{
+#dot-3:checked ~ .category label .three,
+#dot-4:checked ~ .category label .four,
+#dot-5:checked ~ .category label .five,
+#dot-6:checked ~ .category label .six{
     border-color: #d9d9d9;
-    background: #9b59b6;
+    background: #fc5c7d;
 }
 form input[type="radio"]{
     display: none;
@@ -129,6 +143,30 @@ form .button input {
 form .button input:hover{
     background: linear-gradient(to left, #6a82fb, #fc5c7d);
 }
+.miLista {
+    width: 100%; /* Ancho de la lista desplegable */
+    max-width: 320px;
+    padding: 10px; /* Espaciado interior */
+    height: 50px;
+    border: 1px solid #ccc; 
+    background-color: #fff; 
+    transition: all 0.3s ease; 
+    border-radius: 5px;
+    font-size: 16px; 
+    border-bottom-width: 2px;
+    
+}
+  /* Estilo cuando se enfoca la lista desplegable */
+.miLista:focus {
+    outline: none; /* Quita el contorno de enfoque predeterminado */
+    box-shadow: 0 0 5px #fc5c7d; 
+    border: 2px solid #fc5c7d;
+}
+  
+  /* Estilo para las opciones dentro de la lista desplegable */
+.miLista option {
+    transition: opacity 0.3s ease; 
+}
 
 @media (max-width: 584px) {
 .container {
@@ -149,78 +187,10 @@ form .gender-details .category {
     width: 5px;
 }
 } 
-/*@media(max-width: 550px){
+@media(max-width: 550px){
 .container .content .category{
     flex-direction: column;
 }
-}*/
-
-div div div .selectdiv{
-    
-}
-.selectdiv {
-    margin-left: 10px;
-    float: left;
-    /*Don't really need this just for demo styling*/
-    margin: auto;
-    min-width: 310px;
-}
-  
-  /* IE11 hide native button (thanks Matt!) */
-select::-ms-expand {
-  display: none;
-}
-select:hover{
-    border-color: #9b59b6;
-}
-  
-.selectdiv:after {
-    
-    font: 17px "Consolas", monospace;
-    color: #9b59b6;
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
-    right: 20px;
-    /*Adjust for position however you want*/
-    
-    top: 18px;
-    padding: 0 0 2px;
-    border-bottom: 1px solid #999;
-    /*left line */
-    
-    position: block;
-    pointer-events: none;
-    transition: all 0.3s ease;
 }
 
   
-.selectdiv select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    /* Add some styling */
-    border-bottom-width: 2px;
-    transition: all 0.3s ease;
-    display: block;
-    width: 100%;
-    max-width: 320px;
-    height: 50px;
-    float: right;
-    margin: 5px 0px;
-    padding: 0px 24px;
-    font-size: 16px;
-    line-height: 1.75;
-    border-radius: 5px;
-    background-color: #ffffff;
-    background-image: none;
-    border: 1px solid #cccccc;
-    -ms-word-break: normal;
-    word-break: normal;
-    border-color: #cccccc;
-}
-.selectdiv select:hover,
-.selectdiv select:focus{
-    border-color: #9b59b6;
-}
